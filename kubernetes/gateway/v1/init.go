@@ -21,18 +21,8 @@ func (m *module) Version() semver.Version {
 
 func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi.Resource, err error) {
 	switch typ {
-	case "kubernetes:gateway.solo.io/v1:Gateway":
-		r = &Gateway{}
-	case "kubernetes:gateway.solo.io/v1:MatchableHttpGateway":
-		r = &MatchableHttpGateway{}
-	case "kubernetes:gateway.solo.io/v1:MatchableTcpGateway":
-		r = &MatchableTcpGateway{}
-	case "kubernetes:gateway.solo.io/v1:RouteOption":
-		r = &RouteOption{}
 	case "kubernetes:gateway.solo.io/v1:RouteTable":
 		r = &RouteTable{}
-	case "kubernetes:gateway.solo.io/v1:VirtualHostOption":
-		r = &VirtualHostOption{}
 	case "kubernetes:gateway.solo.io/v1:VirtualService":
 		r = &VirtualService{}
 	default:
